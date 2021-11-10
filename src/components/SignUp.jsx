@@ -1,10 +1,9 @@
 import React from 'react'
 
-export default function Menu() {
+export default function SignUp() {
     return (
         <div>
-        <h1>Menu</h1>
-            
+            Sign Up
         </div>
     )
 }

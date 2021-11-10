@@ -1,0 +1,26 @@
+.content{
+    display: block;
+    text-align: center;
+    
+}
+.home.active{
+    padding-top: 75px;
+}
+
+.brand-title{
+    padding-top:8rem;
+    font-family: 'Caveat',cursive;
+    font-size: 9rem;
+    font-weight: 900;
+    text-align: center;
+    align-items: center;
+    justify-self: center;
+    text-shadow: 2px 3px sandybrown;
+}
+.brand-sub{
+    font-family: monospace;
+    text-decoration: springgreen;
+    font-size: 1.5rem;
+    padding-inline:2rem;
+    
+}

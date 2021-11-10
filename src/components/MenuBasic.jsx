@@ -1,10 +1,9 @@
 import React from 'react'
 
-export default function Menu() {
+export default function MenuBasic() {
     return (
         <div>
-        <h1>Menu</h1>
-            
+           Basic
         </div>
     )
 }

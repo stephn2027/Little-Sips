@@ -1,0 +1,12 @@
+.menu-container{
+    min-height: 100vh;
+}
+.menu-headerBG{
+ background: url(../images/black-milk-tea.jpeg);
+ background-size: 100%;
+ height: 44vh;
+ font-size: 4rem;
+}
+.menu-headerBG.active{
+    padding-top: 75px;
+}

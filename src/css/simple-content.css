@@ -1,0 +1,127 @@
+.contentS-container{
+    width: 100%;
+    max-width: 1100px;
+    padding: 2rem;
+    display:flex;
+    flex-direction:row;
+    margin-inline: auto;
+    flex-wrap: nowrap;
+    height: max-content;
+    max-height: 90%;
+    border-bottom: 2px solid rgba(20, 14, 5, 0.111);
+    margin-block: 1rem;
+    margin-inline: auto;
+    box-sizing: border-box;
+    align-items: center;
+   justify-content: center;
+    padding-bottom: 3rem;
+    
+}
+.container_image{
+    display:block;
+    padding: 3rem;
+    padding-bottom: 0 ;
+    min-width: 46%;
+    padding-inline: 1rem;
+    flex-grow: 1;
+    height: 90%;
+    width: 90%;
+    z-index: 0;
+    margin-bottom: -2rem;
+   
+    
+}
+.container_imageR{
+    display:block;
+    padding: 1rem;
+    padding-bottom: 0 ;
+    width: 46%;
+    padding-inline: 2rem;
+    flex-grow: 1;
+    height: 90%;
+    width: 90%;
+    z-index: 0;
+    margin-bottom: -2rem;
+    margin-inline: 1rem;
+    
+}
+.slider-image{
+    background-image: url(../images/store-inside.jpeg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    height: 350px;
+    min-height: 80%;
+    width: 350px;
+    min-width: 80%;
+    padding:1rem ;
+    margin-inline: auto;
+    z-index: 0;
+    display: block;
+    
+}
+.slider-imageR{
+    background-image: url(../images/store-pic.jpeg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    height: 90%;
+    min-height: 350px;
+    width: 80%;
+    min-width: 350px;
+    padding:1rem ;
+    margin-inline: auto;
+    z-index: 2;
+    
+}
+
+.container_wood{
+ display:flex;
+ position:absolute;
+ top: 9vh;
+ left:40%;
+ z-index: 0;
+ max-width: inherit;
+ max-height:50%;
+
+}
+.slider-props_wood{
+ background: url(../images/decoration-wood.jpeg);
+ background-repeat: no-repeat;
+ background-size: 100%;
+ width: 15rem;
+ height: 100px;
+ 
+}
+.container_grey{
+ display:block;
+ position:absolute;
+ top: 41vh;
+ left:55%;
+ z-index:-1;
+ margin-bottom: 3rem;
+ height: 200px;
+ 
+}
+.slider-props_grey{
+    background: url(../images/decoration-grey.jpeg);
+ background-repeat: no-repeat;
+ background-size: 100%;
+ width: 400px;
+ height: 240px;
+}
+
+
+@media (max-width:720px){
+    .contentS-container{
+        flex-direction: column;
+        
+    }
+    .container_image{
+        flex-grow: 1;
+    }
+    .container_grey,.container_wood{
+        display: none;
+    }
+  
+
+    
+}

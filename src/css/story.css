@@ -1,0 +1,92 @@
+.story-container{
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ height: max-content;
+ display: block;
+}
+
+.header-container.active{
+ padding-top: 79px;
+}
+.header-container{
+  background-image: url(../images/filler-bg-2.jpeg);
+  background-position: center;
+  
+  height: 60vh;
+  background-size:cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 40px;
+  width: 100%;
+  
+}
+.xheaderx-title{
+    display: flex;
+    justify-content: center;
+}
+svg{
+    display: block;
+    margin-inline: auto;
+}
+text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-weight: normal; 
+    font-style: normal;
+    
+   
+}
+  
+  .text-line text {
+      position: relative;
+    display: flex;
+    margin-inline: auto;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation:  dash 4s linear forwards infinite, filling 6s ease-in forwards;
+    
+  }
+  .text-line.active text{ 
+    animation-iteration-count: infinite;
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 1;
+    }
+  }
+  
+  @keyframes filling {
+    from{
+      fill: #735d2a;
+      fill-opacity: 0;
+    }
+    to {
+      fill: #DEB887;
+      fill-opacity: 1;
+      
+    }
+  }
+
+.xheaderx-title svg{
+    
+   
+  display: block;
+  margin-inline:auto;
+
+  
+  justify-items: center;
+  align-items: center;
+}
+
+.text-line text{
+    padding-inline:10rem;
+    position: relative;
+    display: flex;
+    justify-self: center;
+    
+}
+ 
+
+
+
+  

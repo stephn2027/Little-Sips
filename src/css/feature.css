@@ -1,0 +1,142 @@
+.feature-container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 3rem;
+    padding-bottom: 0rem;
+    margin-inline:auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    max-height:max-content;
+    margin-bottom: 0;
+    
+}
+.feature-title{
+    margin-top: 3rem;
+    padding-left: 3rem;
+    font-size: 2.6rem;
+    
+}
+.feature-photos_container{
+    position:relative;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin:auto;
+}
+.f-image{
+    display: block;
+     width: 25rem;
+    height: 25rem;
+    margin: 4rem;
+    box-shadow: 2px 3px 4px rgba(93, 69, 2, 0.541);
+}
+.f-image.left{
+    background: url(../images/feature-appreciation-teachers.jpeg) ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+   
+   
+}
+.f-image.right{
+    background: url(../images/feature-club.jpeg) ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+   
+}
+
+.promo-text{
+    text-align:justify;
+    line-height: 1.5;
+    width: 15.5rem;
+    margin-top:2rem;
+    padding: .7rem;
+    color: cornsilk;
+    text-shadow: 1px 3px 1px darkgoldenrod;
+    margin-left: 15rem;
+    background: url(../images/Brown-Ribbon-Download-Transparent-PNG-Image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.feature-instagram_container{
+    
+    max-width: 1100px;
+    width: 100%;
+    height: 50%;
+    padding:3rem;
+    margin-inline: auto;
+    margin-bottom: .5rem;
+    color: rgb(77, 73, 73);
+    border-block: 1px solid rgba(121, 115, 115, 0.293);
+    border-radius: .1rem;
+   
+}
+.feature-instagram{
+    display:block;
+    width:100%;
+    text-align: center;
+    height: 100%;
+    
+    justify-content: center;
+  
+
+}
+.insta-text{
+    position:relative;
+
+    
+    font-size: 3rem;
+    font-weight: 500;
+    top: 1rem;
+
+    
+}
+.logo{
+    filter: grayscale(129%) invert(.7);
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    top:0rem;
+    
+    
+}
+.logo:hover{
+    transform: scale(.93);
+    color: thistle;
+    transition:  all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.feature-effect{
+    display: flex;
+    margin-top: 2.5rem;
+    width: 0.2rem;
+    height:.2rem;
+    border:.1px rgba(121, 115, 115, 0.023);
+    border-radius:.5rem;
+   background-color: rgba(121, 115, 115, 0.02);
+    margin-inline: auto;
+   align-items: center;
+   color: transparent;
+   animation: pulse 2s infinite;
+}   
+
+
+@keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(67, 66, 68, 0.4);
+      box-shadow: 0 0 0 0 rgba(90, 89, 90, 0.4);
+    }
+    70% {
+      -moz-box-shadow: 0 0 0 15px rgba(207, 205, 205, 0);
+      box-shadow: 0 0 0 15px rgba(161, 161, 163, 0);
+    }
+    100% {
+      -moz-box-shadow: 0 0 0 0 rgba(251, 251, 247, 0.);
+      box-shadow: 0 0 0 0 rgba(202, 201, 201, 0.);
+    }
+  }

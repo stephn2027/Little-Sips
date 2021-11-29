@@ -1,0 +1,99 @@
+.filler-content_container{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+     padding: 3rem;
+     margin-top:5rem;
+     padding-left: 5rem;
+     margin:auto;
+     width: 90%;
+     max-width: 1100px;
+     height: 100%;
+     max-height: 1200px;
+    text-align: center;
+    justify-content: space-evenly;
+   
+     padding-bottom: 5rem;
+ }
+.filler-container{
+    display: flex;
+    max-height:50vh;
+    opacity: 1;
+     width: 60%;
+     
+     
+ }
+ .filler-image{
+ background-image: url(../images/filler-bg-2.jpeg);
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 700px;
+ height:400px;
+ margin-top:-4rem;
+ padding-left: 1rem;
+ margin-right: 1rem;
+ z-index: 1;
+ transition: all .5s ease-in;
+ 
+ 
+ 
+ }
+ 
+
+ 
+ 
+ 
+ .filler-container_wood{
+     z-index: 1;
+     max-width: 100%;
+     opacity: 1;
+     position: absolute;
+    
+ 
+ }
+ 
+ .filler-props-wood{
+     background-image: url(../images/decoration-wood.jpeg);
+     width: 3.5rem;
+     height: 11rem;
+     
+     position: relative;
+     top:-5rem;
+     left:-26rem;
+ 
+ }
+ 
+ 
+ .filler-container_grey{
+     z-index: 0;
+     width: 100%;
+     max-height: 400px;
+     opacity: 1;
+     position: absolute;
+     margin-bottom: 5rem;
+    justify-content: center;
+    align-items: center;
+    transition:  .5s ease-in-out;
+  
+    
+ }
+ 
+ .filler-props-grey{
+     background-image: url(../images/decoration-grey.jpeg);
+     background-size:cover;
+     background-repeat: no-repeat;
+     background-blend-mode: color-burn;
+     width: 130%;
+     max-width: 110vw;
+     max-height: 50vh;
+     height:20rem;
+     z-index: -1;
+     position: relative;
+     right: 10%;
+     align-content: center;
+     overflow: hidden;
+ 
+ }
+

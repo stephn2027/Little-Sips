@@ -1,32 +1,55 @@
 import React, { useRef } from 'react'
-import _ from 'lodash';
 
+import { useIntersection } from "react-use";
 
-export default function SlideImage({imgClass}) {
+import gsap from "gsap";
+
+export default function SlideImage({imgClass,sliderClass}) {
     
-    const sliderImageRef = useRef(null);
-    const sliderImage = sliderImageRef;
     
-    const checkSlide=(e)=>{
-        const slideInAt = (window.scrollY + window.innerHeight) 
-        - sliderImage.current.scrollHeight / 3;
-        
-        const imageBottom = sliderImage.current.offsetTop + sliderImage.current.scrollHeight;
-        const isHalfShown = slideInAt>sliderImage.current.offsetTop;
-        const isNotScrolledPast = imageBottom > window.scrollY;
-
-        if(isHalfShown&&isNotScrolledPast){
-            sliderImage.current.classList.add('active');
-        }else{
-            sliderImage.current.classList.remove('active');
-        }
-
-    }
-    window.addEventListener('scroll',_.debounce(checkSlide,20));
+        // Ref for our element
+        const sectionRef = useRef(null);
+        // All the ref to be observed
+        const intersection = useIntersection(sectionRef, {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.8
+        });
+      
+        // Animation for fading in
+        const fadeIn = element => {
+          gsap.to(element, 1, {
+            opacity: 1,
+            y: 10,
+            scale:1.1,
+         ease: "power4.out",
+            stagger: {
+              amount: 0.3
+            }
+          });
+        };
+        // Animation for fading out
+        const fadeOut = element => {
+          gsap.to(element, 1, {
+            opacity: 1,
+            scale:.98,
+            y:-20,
+            ease: "power4.out"
+          });
+        };
+      
+        // checking to see when the vieport is visible to the user
+        intersection && intersection.intersectionRatio < .8
+          ? fadeOut(".fadeIn")
+          : fadeIn(".fadeIn");
+    
+   
+    
+   
 
     return (
-        <div className='slider-container' ref={sliderImageRef}>
-            <div className={imgClass} >
+        <div className={sliderClass} ref={sectionRef}>
+            <div className={`${imgClass} fadeIn`}>
                 
             </div>
         </div>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import Button from './Button';
-import Dropdown from './Dropdown';
+import Dropdown from './Dropdown'
+import logo from '../images/logo-2.png'
 import '../css/navbar.css';
+
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -31,7 +33,7 @@ export default function Navbar() {
       setDropdown(false);
     } else {
       setDropdown(true);
-      console.log(dropdownstate);
+      
     }
   };
 
@@ -46,8 +48,10 @@ export default function Navbar() {
     <React.Fragment>
       <nav className={navClass}>
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          <i className="fas fa-coffee"> </i>Little Sips
+         <img src={logo}  className="nav-logo" alt="" />
+          
         </Link>
+        
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
         </div>

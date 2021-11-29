@@ -4,36 +4,78 @@
 @import './navbar.css';
 @import './button.css';
 @import './products-slider.css';
-
+@import '../css/text.css';
+@import '../css/filler.css';
+@import '../css/feature.css';
+@import '../css/footer.css';
+@import '../css/story.css';
+@import '../css/simple-content.css';
+@import '../css/menu.css';
+@import '../css/filter-list.css';
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Overpass', sans-serif;
-   
+    
     font-weight: bold;
+    
+}
+html{
+  height: max-content;
+}
+body{
+  height:100%;
+}
+:root{
+  --sbrown: rgb(160, 118, 41);
+  
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #E2D9C2;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #fff;
+    --dark: #000;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-}
-.about,
-.menu,
-.contact,
-.basic,
-.sign-up,
-.featured,
-.blended-bev {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
 
 .home {
-  background-image: url(../images/wallpapercoffee.jpg);
+  background-image: url(../images/wallpapertip_table-top-wallpaper_537087.jpg);
   background-position: center;
-  height: 120vh;
+  height: 60vh;
   background-size:cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 40px;
+  z-index: 0;
+  
+}
+.footer-bg{
+  background: linear-gradient(360deg, #8a5c068e 0%, #c6770078 50%);
+
 }

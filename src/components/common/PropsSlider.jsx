@@ -1,32 +1,49 @@
 import React, { useRef } from 'react'
-import _ from 'lodash';
 
-
+import gsap from 'gsap';
+import { useIntersection } from 'react-use';
 export default function PropsSlider({propsClass,propsCont}) {
     
-    const sliderImageRef = useRef(null);
-    const sliderImage = sliderImageRef;
-    
-    const checkSlide=(e)=>{
-        const slideInAt = (window.scrollY + window.innerHeight) 
-        - sliderImage.current.scrollHeight ;
-        
-        const imageBottom = sliderImage.current.offsetTop + sliderImage.current.scrollHeight;
-        const isHalfShown = slideInAt>sliderImage.current.offsetTop;
-        const isNotScrolledPast = imageBottom > window.scrollY;
-
-        if(isHalfShown&&isNotScrolledPast){
-            sliderImage.current.classList.add('active');
-        }else{
-            sliderImage.current.classList.remove('active');
+    // Ref for our element
+    const sectionRef = useRef(null);
+    // All the ref to be observed
+    const intersection = useIntersection(sectionRef, {
+      root: null,
+      rootMargin: "0px",
+      threshold: .84
+    });
+  
+    // Animation for fading in
+    const fadeIn = element => {
+      gsap.to(element, 1, {
+        opacity: 1,
+        x:-10,
+        scale:1,
+     ease: "power4.out",
+        stagger: {
+          amount: 0.3
         }
+      });
+    };
+    // Animation for fading out
+    const fadeOut = element => {
+      gsap.to(element, 1, {
+        opacity: 1,
+        scale:1,
+        x:30,
+        ease: "power4.out"
+      });
+    };
+  
+    // checking to see when the vieport is visible to the user
+    intersection && intersection.intersectionRatio < .84
+      ? fadeOut(".fadeInProps")
+      : fadeIn(".fadeInProps");
 
-    }
-    window.addEventListener('scroll',_.debounce(checkSlide,20));
 
     return (
-        <div className={propsCont} ref={sliderImageRef}>
-            <div className={propsClass} >
+        <div className={propsCont} ref={sectionRef} >
+            <div className={`${propsClass} fadeInProps` } >
                 
             </div>
         </div>

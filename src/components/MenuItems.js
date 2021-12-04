@@ -1,6 +1,6 @@
 
 
-export const MenuItems = [
+export const contactLinks = [
     {
         title:"Basic",
         path:"/menu-basic",

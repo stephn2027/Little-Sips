@@ -10,15 +10,15 @@
  padding-top: 79px;
 }
 .header-container{
-  background-image: url(../images/filler-bg-2.jpeg);
-  background-position: center;
+  background-image: url(../images/robert-haverly-_kmr5wKVW7E-unsplash.jpg);
   
-  height: 60vh;
+  
+  height:calc(30vh + 7vw);
   background-size:cover;
   background-repeat: no-repeat;
   color: #fff;
-  font-size: 40px;
-  width: 100%;
+  font-size: calc(3rem + 1.5vw);
+  
   
 }
 .xheaderx-title{

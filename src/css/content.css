@@ -1,28 +1,35 @@
 .content-container{
-    display: flex;
-    flex-wrap: wrap;
-     flex-direction: row;
-     padding: 1rem;
-     margin-top: 5rem;
-     margin-inline: auto;
-     width: 100%;
-     max-width: 1100px;
-     height: 100%;
-     max-height: 100vh;
-    text-align: center;
-    justify-content: space-evenly;
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
+    width: 100%;
+    max-width: 1100px;
+    padding: 2rem;
+    display:flex;
+    flex-direction:row;
+    margin-inline: auto;
+    flex-wrap: nowrap;
+    height: max-content;
+    max-height: 90%;
+    border-bottom: 2px solid rgba(20, 14, 5, 0.111);
+    margin-block: 1rem;
+    margin-inline: auto;
+    box-sizing: border-box;
+    align-items: center;
+   justify-content: center;
+    padding-bottom: 5rem;
    
      
  }
  .slider-container{
-    margin: 1rem; 
-    display: block;
-     opacity: 1;
-     width: 40%;
-     height: 100%;
-     z-index: 1;
+    display:block;
+    padding: 3rem;
+    padding-bottom: 0 ;
+    min-width: 46%;
+    padding-inline: 1rem;
+    flex-grow: 1;
+    height: 90%;
+    width: 90%;
+    z-index: 0;
+    margin-bottom: -2rem;
+    margin-inline: 1rem;
      
      
  }
@@ -30,13 +37,15 @@
  background-image: url(../images/store-outisde_edited.jpg);
  background-size:100%;
  background-repeat: no-repeat;
- width: 400px;
- height:500px;
- padding-inline: 1rem;
- margin-inline: auto;
- transition: all .5s ease-in;
- 
- z-index: 1;
+ height: 440px;
+    min-height: 75%;
+    width: 300px;
+    min-width: 65%;
+    padding:1rem ;
+    margin-inline: auto;
+    z-index: 0;
+    display: block;
+    margin-bottom: 2rem;
  
  
  }
@@ -46,48 +55,49 @@
  
  
  .props-container_wood{
-     z-index: 1;
-     max-width: 100%;
-     opacity: 1;
-     position: absolute;
-   
+    display:flex;
+    position:absolute;
+    top: 6%;
+    left:40%;
+    z-index: 0;
+    max-width: inherit;
+    max-height:50%;
  
  }
  
  .slider-props-wood_align-left{
      background-image: url(../images/decoration-wood.jpeg);
-     width: 15rem;
-     height: 3rem;
-     z-index: 2;
-     position: relative;
-     top: -1rem;
-     left:2rem;
+     background-repeat: no-repeat;
+     background-size:cover;
+     width: 200px;
+     height: 50px;
+     
+    
+     
+     
  
  }
  
  .props-container_grey{
-     z-index: 0;
-     width: 100%;
-     opacity: 1;
-     position: absolute;
-     margin-bottom: 5rem;
-    
-     transition: all .5s ease-in-out;
+    display:block;
+    position:absolute;
+    top: 86%;
+    left:63%;
+    z-index:-1;
+    margin-bottom: 3rem;
+    height: 100px;
+    margin-bottom: 2rem;
+     transition: all .3s ease-in-out;
     
  }
  
  .slider-props-grey_pop-below{
      background-image: url(../images/decoration-grey.jpeg);
-     width: 100%;
+     background-repeat: no-repeat;
      background-size: cover;
-     max-width: 50vw;
-     height: 9rem;
-     max-height: 40vh;
-     position: relative;
-     z-index: -1;
-     top: 24rem;
-     right:-45%;
-    overflow: hidden;
+     width: 300px;
+     height: 80px;
+     
  }
  @media ( max-width:720px) {
      .content-container{
@@ -99,5 +109,8 @@
         
          margin-inline: auto;
          justify-content: center;
+     }
+     .props-container_grey,.props-container_wood{
+      display: none;
      }
  }

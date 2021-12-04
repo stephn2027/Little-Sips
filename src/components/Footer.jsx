@@ -20,16 +20,16 @@ export default function Footer() {
           <ul className='links'>LINKS
               <li className='list'><Link to="/">Homepage</Link></li>
               <li className='list'><Link to="/story">Story</Link></li>
-              <li className='list'><Link to="/menu" target="_blank">Menu</Link></li>
+              <li className='list'><Link to="/menu">Menu</Link></li>
              
               
           </ul>
           <ul className='links'>CONTACTS
-          <li className='list'>Orders: <Link to={{pathname: 'https://www.yelp.com/biz/little-sips-cafe-harrison'}}>Order online</Link></li>
+          <li className='list'>Orders: <a href='https://www.yelp.com/biz/little-sips-cafe-harrison' target="_blank" rel='noreferrer'>Order online</a></li>
           <li className='list'>Phone: <a href="tel:+(973) 317-1200">(973) 317-1200</a></li>
           </ul>
           <ul className="links">SOCIAL
-          <li className='list'> <i className="fab fa-instagram"/> <Link to={{pathname:'https://www.instagram.com/littlesipscafe/?hl=en'}}>littlesipscafe</Link></li>
+          <li className='list'> <i className="fab fa-instagram"/> <a href='https://www.instagram.com/littlesipscafe/?hl=en' target="_blank" rel='noreferrer'>littlesipscafe</a></li>
           
           </ul>
 

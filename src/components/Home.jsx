@@ -33,7 +33,7 @@ export default function Home() {
             <Navbar/>
             <Title/>
             
-            <p className="brand-sub">"Start your day right with a delightful cup of coffee."</p>
+            <p className="brand-sub">Enjoy the little moments.</p>
             
             </div>
             <Content

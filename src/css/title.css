@@ -11,13 +11,13 @@
 	-moz-animation: Gradient 5s ease infinite;
 }
 .inner-cutout{
-	padding: 40px 0;
+	padding: 20px 0;
 	display: block;
 	/* background-color:#ff6f69;#ff6f69 */
 	background-color: transparent;
-	margin: 2%;
-	padding-bottom: 40px;
-	height: 300px;
+	margin: 1rem;
+	padding-bottom: 10px;
+	height: 200px;
 	/* background: radial-gradient(#ff6f69, #ff8b87);
 	 background-size: 300%;*/
 	background-position:50% 50%; 
@@ -28,11 +28,12 @@
 	vertical-align: middle;
 	text-align: center;
 	font-family: 'Caveat', cursive;
-	font-size:90pt;
-    font-weight: bolder;
+	font-size: clamp(5rem, 9vw, 8rem);
+    font-weight:bolder;
     
 	color: blue;
 	color: #fff;
+	
 	background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #d1a655 34%, #e9a320 34%);
 	background-size: 400%;
     background-clip: text;
@@ -66,5 +67,6 @@
 	margin-inline:auto;
 	margin-top: 0;
 }
+
 
 

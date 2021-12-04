@@ -4,7 +4,7 @@ import Home from './Home';
 import Menu from './Menu';
 import About from './About';
 import Contact from './Contact';
-import SignUp from './SignUp';
+import Location from './Location';
 import MenuBasic from './MenuBasic';
 import MenuFeatured from './MenuFeatured';
 import MenuBlendedBev from './MenuBlendedBev';
@@ -28,7 +28,7 @@ export default function App() {
         <Route path="/story" component={Story}></Route>
         <Route path="/about" component={About}></Route>
         <Route path="/contact" component={Contact}></Route>
-        <Route path="/sign-up" component={SignUp}/>
+        <Route path="/location" component={Location}/>
        <Route path="/" exact component={Home}/>
 
       </Switch>

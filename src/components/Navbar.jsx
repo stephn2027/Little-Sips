@@ -6,7 +6,8 @@ import logo from '../images/logo-2.png'
 import '../css/navbar.css';
 
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const onTypeSelect = props;
   const [click, setClick] = useState(false);
   const [dropdownstate, setDropdown] = useState(false);
   const [navClass,setNavClass] = useState("cnavbar");
@@ -29,7 +30,7 @@ export default function Navbar() {
   });
 
   const onMouseEnter = () => {
-    if (document.innerWidth < 960) {
+    if (window.innerWidth < 960) {
       setDropdown(false);
     } else {
       setDropdown(true);
@@ -38,7 +39,7 @@ export default function Navbar() {
   };
 
   const onMouseLeave = () => {
-    if (document.innerWidth < 960) {
+    if (window.innerWidth < 960) {
       setDropdown(false);
     } else {
       setDropdown(false);
@@ -58,7 +59,7 @@ export default function Navbar() {
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
             <NavLink
-              to="/about"
+              to="/story"
               className="nav-links"
               onClick={closeMobileMenu}
             >
@@ -67,34 +68,38 @@ export default function Navbar() {
           </li>
           <li
             className="nav-item"
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
+            
           >
-            <Link to="/menu" className="nav-links" onClick={closeMobileMenu}>
+            <NavLink to="/menu" className="nav-links" onClick={closeMobileMenu}>
               Menu
+             
+            </NavLink>
+            
+          </li>
+          <li className="nav-item"
+          onMouseEnter={()=>onMouseEnter()}
+            onMouseLeave={()=>onMouseLeave()}
+            >
+            <div
+              to=""
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Contact Us &nbsp; 
               <i className="fas fa-caret-down"></i>
-            </Link>
+            </div>
             {dropdownstate && <Dropdown />}
           </li>
           <li className="nav-item">
             <NavLink
-              to="/contact"
+              to="/location"
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Contact Us
+              Location
             </NavLink>
           </li>
-          <li className="nav-item">
-            <Link
-              to="/sign-up"
-              className="nav-links-mobile"
-              onClick={closeMobileMenu}
-            >
-              Sign Up
-            </Link>
-          </li>
-          <Button />
+          {/* <Button /> */}
         </ul>
       </nav>
     </React.Fragment>

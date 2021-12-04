@@ -1,0 +1,25 @@
+.location-container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: max-content;
+    display: block;
+   }
+   
+   .location-container.active{
+    padding-top: 75px;
+   }
+   .location-container{
+     background-image: url(../images/location-bg.jpg);
+     height: calc(30vh + 5vw);
+     background-size: cover;
+     background-repeat: no-repeat;
+   
+     font-size:calc(3rem + 1.5vw);
+     
+   }
+   .map-container{
+       width: 90%;
+       margin-inline: auto;
+       padding:3rem;
+   }

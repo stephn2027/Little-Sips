@@ -9,16 +9,16 @@ export default function ContentSimpleR(props) {
     const {sliderClass,imgClass,text,sliderPropsClass1,sliderPropsClass2,propsContWood,propsContGrey,title} = props;
    
 
-    const tls =gsap.timeline();
+    const tl =gsap.timeline();
     useLayoutEffect(()=>{
-      tls.from('.content-container',{x:-360, opacity:1,delay:0.3,ease:"power3.easeIn"},'Start')
+      tl.from('.contentS-containerss',{x:60, opacity:0,duration:1,ease:"back(.8).out"})
     },[]);
   
     
     
     
     return (
-        <div className='contentS-container'  
+        <div className='contentS-container r'  
         >
           <SlideImage imgClass={imgClass} sliderClass={sliderClass} />
           <TextSimple title={title} text={text}/>

@@ -31,7 +31,8 @@
   
 
   .cnavbar.active{
-    background: linear-gradient(210deg, #e9dac3, #f0ddbbfe, #f8e2b2fc);
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(200,176,126,1) 0%, rgba(223,172,117,1) 100%);
     height: 80px;
     display: flex;
     position:fixed;
@@ -98,7 +99,7 @@
   .nav-item {
     display: flex;
     align-items: center;
-    height: 80px;
+    height: 81px;
     
   }
   
@@ -141,7 +142,7 @@
       width: 100%;
       height: max-content;
       position: absolute;
-      top: 80px;
+      top: 81px;
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
@@ -157,6 +158,7 @@
       z-index: 2;
       align-self: center;
       justify-content: center;
+      height: 100vh;
       
       
     }
@@ -217,7 +219,7 @@
      
       text-decoration: none;
       color: rgb(117, 99, 21);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
   
     .nav-links-mobile:hover {

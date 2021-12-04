@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 .home-container{
     z-index: 0;
-    height: 100%;
-    ;
+    height: max-content;
+    
     overflow: hidden;
 }
+
 .content{
     display: block;
     text-align: center;
@@ -14,9 +17,9 @@
 }
 
 .brand-title{
-    padding-top:8rem;
+    padding-top:7rem;
     font-family: 'Caveat',cursive;
-    font-size: 9rem;
+    font-size: 1rem;
     font-weight: 900;
     text-align: center;
     align-items: center;
@@ -24,9 +27,19 @@
     text-shadow: 2px 3px sandybrown;
 }
 .brand-sub{
-    font-family: monospace;
+    display: block;
+    position: relative;
+    font-family:'Satisfy', cursive;
     text-decoration: springgreen;
-    font-size: 1.5rem;
+    font-size:clamp(1.4rem,2.4vw,4rem);
     padding-inline:2rem;
-    
+    padding-top: 0;
+    margin-bottom: .5rem;
+    text-shadow: 1px 1px black;
+      
+}
+@media (max-width:590px) {
+    .brand-sub{
+        margin-top: -4rem;
+    }
 }

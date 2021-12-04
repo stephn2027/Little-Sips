@@ -1,7 +1,7 @@
 .filler-content_container{
     
     display: flex;
-    flex-wrap: wrap;
+ 
     flex-direction: row;
     justify-content: center;
      padding: 3rem;
@@ -19,9 +19,11 @@
  }
 .filler-container{
     display: flex;
+    flex-wrap: wrap;
     max-height:50vh;
     opacity: 1;
      width: 60%;
+     margin-inline: auto;
      
      
  }
@@ -30,14 +32,16 @@
  background-size: cover;
  background-repeat: no-repeat;
  width: 700px;
+ min-width: 350px;
  height:400px;
+ min-height: 90%;
  margin-top:-4rem;
  padding-left: 1rem;
  margin-right: 1rem;
  z-index: 1;
  transition: all .5s ease-in;
  
- 
+ display: block;
  
  }
  
@@ -46,22 +50,22 @@
  
  
  .filler-container_wood{
-     z-index: 1;
-     max-width: 100%;
-     opacity: 1;
-     position: absolute;
-    
+    display:flex;
+    position:absolute;
+    top: -15%;
+    left:8%;
+    z-index: 1;
+    max-width: inherit;
+    max-height:50%;
  
  }
  
  .filler-props-wood{
      background-image: url(../images/decoration-wood.jpeg);
-     width: 3.5rem;
-     height: 11rem;
-     
-     position: relative;
-     top:-5rem;
-     left:-26rem;
+     background-repeat: no-repeat;
+     background-size:cover;
+     width: 49px;
+     height: 200px;
  
  }
  

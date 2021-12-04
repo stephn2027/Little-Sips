@@ -4,8 +4,8 @@ import '../css/button.css';
 
 export default function Button() {
     return (
-        <Link to="sign-up">
-            <button className="btn">Sign Up</button>
+        <Link to="/location">
+            <button className="btn nav-links">Location</button>
         </Link>
     )
 }

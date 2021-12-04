@@ -6,7 +6,7 @@ export default function FilterList(props) {
   
   return (
     <React.Fragment>
-      <ul class="list-group list-group-horizontal">
+      <ul className="list-group list-group-horizontal">
         {types.map((type) => (
           <li
           key={type[valueProperty]} 

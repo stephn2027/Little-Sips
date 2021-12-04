@@ -43,7 +43,8 @@
     color: #212529;
     text-decoration: none;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .125)
+    border: 1px solid rgba(0, 0, 0, .125);
+    cursor: pointer;
 }
 
 .list-group-item:first-child {
@@ -63,7 +64,7 @@
 }
 
 .list-group-item.active {
-    z-index: 2;
+    z-index: 1;
     color: #fff;
     background-color: #855806;
     border-color: #855806;

@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-
+import { Link } from 'react-router-dom';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { getCoffeesCarousel } from '../../services/CoffeeService';
@@ -67,7 +67,7 @@ export default function ProductsSlider() {
         
       />
         <div className ='all-menu'>
-        <button className="btn btn-link">All Menu ➤</button>
+        <Link to="/menu"><button className="btn btn-link">All Menu ➤</button></Link>
         </div>
        
         </div>

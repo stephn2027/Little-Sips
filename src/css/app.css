@@ -12,6 +12,7 @@
 @import '../css/simple-content.css';
 @import '../css/menu.css';
 @import '../css/filter-list.css';
+@import '../css/location.css';
 * {
     box-sizing: border-box;
     margin: 0;
@@ -65,14 +66,15 @@ html{
 
 
 .home {
-  background-image: url(../images/wallpapertip_table-top-wallpaper_537087.jpg);
-  background-position: center;
-  height: 60vh;
-  background-size:cover;
+  background-image: url(../images/louis-hansel-Zg7_HNM9H7I-unsplash.jpg);
+  
+  height: clamp(40vh,27vw,50vh);
+  background-size:100%;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 40px;
   z-index: 0;
+ 
   
 }
 .footer-bg{

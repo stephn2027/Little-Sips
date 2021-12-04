@@ -24,7 +24,7 @@ export default function HeaderTitle({text}) {
                 fontStyle="font-family: 'Baloo Tamma', georgia, times, serif; font-weight: normal; font-style: normal"
                 x="50%" y="50%" dominantBaseline="middle" textAnchor="middle"
                 fill="none"
-                fontSize="90"
+                
               >
                 {text}
               </text>

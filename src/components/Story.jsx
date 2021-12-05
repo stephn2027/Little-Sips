@@ -41,7 +41,7 @@ export default function Story() {
             sliderPropsClass2={'slider-props_grey'}
             sliderClass ={'container_image'}
             imgClass={'slider-image'}
-            text={'Couvee is a brand of food and beverages from Yogyakarta, Indonesia. It was founded by two young man, on April 2017.  They started the business together in a modest rented building at Jalan Kaliurang Km 5.'}
+            text={'Little Sips is a brand of food and beverages from Harrison Ave., New Jersey. It was founded by two sisters, on May 2021.  They started the business together in a modest rented building at 730 Harrison Ave.'}
             title={'OUR BEGINNING'}
        />
        <ContentSimpleR
@@ -52,7 +52,7 @@ export default function Story() {
             sliderPropsClass2={'slider-props_greyR'}
             sliderClass ={'container_imageR'}
             imgClass={'slider-imageR'}
-            text={'Couvee comes from the idea that everyone can enjoy coffee. It doesn’t matter if you like your coffee light and sweet, or you prefer strong coffee with no sugar, you can always enjoy it with your personal preferences in here. It’s our pleasure to help you find the best crafted drink that suits your taste in the best way.'}
+            text={'Little Sips comes from the idea that everyone can enjoy coffee. It doesn’t matter if you like your coffee light and sweet, or you prefer strong coffee with no sugar, you can always enjoy it with your personal preferences in here. It’s our pleasure to help you find the best crafted drink that suits your taste in the best way.'}
             title={'OUR BACKGROUNDS'}
        />
       </div>

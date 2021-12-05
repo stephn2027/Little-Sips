@@ -44,7 +44,7 @@ export default function Location() {
               sliderPropsClass2={'loc-slider-props_grey'}
               sliderClass ={'loc-container_image'}
               imgClass={'loc-slider-image'}
-              text={'Couvee is a brand of food and beverages from Yogyakarta, Indonesia. It was founded by two young man, on April 2017.  They started the business together in a modest rented building at Jalan Kaliurang Km 5.'}
+              text={'We will be delighted to see you! We are located at 730 Harrison Ave, near West Hudson Park. 3 minutes away from Harrison Train Station '}
               title={'COME VISIT US'}
             
          >

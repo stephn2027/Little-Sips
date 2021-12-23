@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 import { getCoffees } from '../services/CoffeeService';
 import HeaderTitle from './common/Headertitle';
 import Navbar from './Navbar';
@@ -49,6 +49,8 @@ export default function Menu() {
         duration: 0.5,
       });
   }, []);
+
+  
 
   const filtered =
     selectedCoffeeType && selectedCoffeeType.id

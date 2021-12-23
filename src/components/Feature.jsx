@@ -7,17 +7,28 @@ export default function Feature() {
   const timeline = gsap.timeline();
 
   useEffect(() => {
-    timeline.from(
-      '.feature-container',
-      {
-        y: -65,
+    timeline
+      .from(
+        '.feature-container',
+        {
+          y: -65,
+          opacity: 0,
+          ease: 'Power2.easeIn',
+          delay: 0.2,
+        },
+        'Start'
+      )
+      .from(
+        '.feature-title',
+        { y: 20, opacity: 0, ease: 'Power4.easeIn', delay: 0.2 },
+        'Start'
+      )
+      .from('.feature-photos_container', {
+        x: 220,
         opacity: 0,
-        ease: 'Power2.easeIn',
+        ease: 'Power4.easeInOut',
         delay: 0.2,
-      },
-      'Start')
-      .from('.feature-title',{y:20,opacity:0,ease:'Power4.easeIn',delay:0.2},'Start')
-      .from('.feature-photos_container',{x:220,opacity:0,ease:'Power4.easeInOut',delay:0.2},)
+      });
   }, []);
   return (
     <React.Fragment>

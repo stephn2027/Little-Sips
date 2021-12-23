@@ -15,19 +15,37 @@ export default function Menu() {
   const [coffeeTypes, setCoffeeTypes] = useState([]);
 
   const timeline = gsap.timeline();
-  
-  
 
   useEffect(() => {
     //    const coffees = getCoffees();
     setImages(getCoffees());
     setCoffeeTypes([{ name: 'All' }, ...getCoffeeType()]);
-   
-    timeline.from('.xheaderx-title',{opacity:.3,scale:0,ease:"back.out(1.4)",duration:.1,})
-    .from('.product-title',{opacity:0,y:965,ease:"back.out(1)",duration:.6,})
-    .from('.products-container',{opacity:0,y:965,ease:"back.out(1)",duration:.7,})
-    .from('.ReactGridGallery_tile-viewport',{opacity:0,scale:.2,ease:"back.out(1)",duration:.5,})
 
+    timeline
+      .from('.xheaderx-title', {
+        opacity: 0.3,
+        scale: 0,
+        ease: 'back.out(1.4)',
+        duration: 0.1,
+      })
+      .from('.product-title', {
+        opacity: 0,
+        y: 965,
+        ease: 'back.out(1)',
+        duration: 0.6,
+      })
+      .from('.products-container', {
+        opacity: 0,
+        y: 965,
+        ease: 'back.out(1)',
+        duration: 0.7,
+      })
+      .from('.ReactGridGallery_tile-viewport', {
+        opacity: 0,
+        scale: 0.2,
+        ease: 'back.out(1)',
+        duration: 0.5,
+      });
   }, []);
 
   const filtered =
@@ -42,7 +60,6 @@ export default function Menu() {
 
     if (img.hasOwnProperty('isSelected')) {
       img.isSelected = !img.isSelected;
-      
     } else {
       img.isSelected = true;
     }
@@ -60,13 +77,13 @@ export default function Menu() {
 
   return (
     <div className="menu-container">
-    <div className="menu-bg_wrapper">
-    <div className={menuBg}>
-        <Navbar onTypeSelect={handleTypeSelect} />
-        <HeaderTitle text={'MENU'} />
+      <div className="menu-bg_wrapper">
+        <div className={menuBg}>
+          <Navbar onTypeSelect={handleTypeSelect} />
+          <HeaderTitle text={'MENU'} />
+        </div>
       </div>
-    </div>
-     
+
       <div className="product-title">PRODUCTS</div>
       <div className="products-container">
         <div className="filter-wrapper">

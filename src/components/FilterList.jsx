@@ -7,9 +7,9 @@ export default function FilterList(props) {
   return (
     <React.Fragment>
       <ul className="list-group list-group-horizontal">
-        {types.map((type) => (
+        {types.map((type,i) => (
           <li
-          key={type[valueProperty]} 
+          key={i} 
           className={type===selectedCoffeeType?"list-group-item active":"list-group-item"}
           onClick={()=>onTypeSelect(type)}
           >

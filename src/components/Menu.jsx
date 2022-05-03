@@ -6,8 +6,8 @@ import Gallery from 'react-grid-gallery';
 import { getCoffeeType } from '../services/TypeOfCoffeeService';
 import FilterList from './FilterList';
 import gsap from 'gsap';
-import client from '../services/apolloService';
-import { gql } from '@apollo/client';
+// import client from '../services/apolloService';
+// import { gql } from '@apollo/client';
 
 export default function Menu() {
   const [menuBg, setMenuBg] = useState('menu-headerBG');

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getCoffees } from '../services/CoffeeService';
 import HeaderTitle from './common/Headertitle';
 import Navbar from './Navbar';
@@ -15,7 +15,7 @@ export default function Menu() {
   const [selectedCoffeeType, setSelectedCoffeeType] = useState();
   const [coffeeImages, setImages] = useState([]);
   const [coffeeTypes, setCoffeeTypes] = useState([]);
-
+  
   const timeline = gsap.timeline();
 
   useEffect(() => {
@@ -57,18 +57,21 @@ export default function Menu() {
       ? coffeeImages.filter((m) => m.kind === selectedCoffeeType.name)
       : coffeeImages;
 
-  const handleClick = (index, image) => {
+  const handleClick = (index) => {
     const imagesCopy = { ...filtered };
 
     let img = imagesCopy[index];
-
+    console.log(img);
     if (img.hasOwnProperty('isSelected')) {
       img.isSelected = !img.isSelected;
     } else {
       img.isSelected = true;
     }
-    setOnSelectedImage(imagesCopy);
+
+ 
+    setOnSelectedImage(img);
   };
+ 
   const handleTypeSelect = (type) => {
     setSelectedCoffeeType(type);
   };
@@ -83,7 +86,7 @@ export default function Menu() {
     <div className="menu-container">
       <div className="menu-bg_wrapper">
         <div className={menuBg}>
-          <Navbar onTypeSelect={handleTypeSelect} />
+          <Navbar />
           <HeaderTitle text={'MENU'} />
         </div>
       </div>
@@ -115,22 +118,22 @@ export default function Menu() {
   );
 }
 
-export async function getStaticProps() {
-  const { data } = await client.query({
-    query: gql`
-      query {
-        coffees {
-          coffeeId
-          kind
-          isSelected
-        }
-      }
-    `,
-  });
+// export async function getStaticProps() {
+//   const { data } = await client.query({
+//     query: gql`
+//       query {
+//         coffees {
+//           coffeeId
+//           kind
+//           isSelected
+//         }
+//       }
+//     `,
+//   });
 
-  const { coffees } = data;
-  console.log(coffees);
-  return {
-    props: { coffees },
-  };
-}
+//   const { coffees } = data;
+//   console.log(coffees);
+//   return {
+//     props: { coffees },
+//   };
+// }

@@ -12,13 +12,13 @@ export default function ProductsSlider() {
 
     function getdata() {
       //    const {data:images} =await http.get('https://github.com/stephn2027/Little-Sips/tree/master/src/images',{});
-      const image = slideImagesCopy.map((m) => (
+      const images = slideImagesCopy.map((m) => (
         <div>
           <img src={m.download_url} alt={m.author} />
           <h2>{m.author}</h2>
         </div>
       ));
-      setSlideImages(image);
+      setSlideImages(images);
     }
     getdata();
   }, []);

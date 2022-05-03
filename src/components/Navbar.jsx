@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import Button from './Button';
 import Dropdown from './Dropdown';
 import logo from '../images/logo-2.png';
 import '../css/navbar.css';

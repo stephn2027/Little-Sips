@@ -8,13 +8,13 @@ import Feature from './Feature';
 import Title from './common/Title';
 
 export default function Home() {
-  const [Class, setClass] = useState('content home');
+  const [homeClass, setHomeClass] = useState('content home');
 
   const timeline = gsap.timeline();
   window.addEventListener('scroll', () => {
     window.scrollY >= 10
-      ? setClass('content home active')
-      : setClass('content home');
+      ? setHomeClass('content home active')
+      : setHomeClass('content home');
   });
 
   useLayoutEffect(() => {
@@ -26,12 +26,12 @@ export default function Home() {
         delay: 0.2,
         ease: 'power4.out',
       });
-  }, []);
+  }, [timeline]);
 
   return (
     <React.Fragment>
       <div className="home-container">
-        <div className={Class}>
+        <div className={homeClass}>
           <Navbar />
           <Title />
 
